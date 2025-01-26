@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="last1.css"/>
+  <title>Text Animation and Popup</title>
+</head>
+<body>
+  <div class="animation-box">
+    <div class="animation-container">
+      <div class="first-text">I Love you</div>
+      <div class="second-text">Miss U</div>
+      <div class="third-text">kiss you</div>
+      <div class="fourth-text">F___ you (follow you)</div>
+      <div class="fifth-text">Bomb lagti ho Fatogi ky <br> Meri lagti ho patogi ky</div>
+      <div class="sixth-text">
+        <h1>Would you like to me my Valentine</h1>
+        <p>Please! (I know your ans though) </p>
+        <div class="button--group">
+          <button type="button" onclick="openPopup()">YES !!</button>
+          <button type="button" id="no" onclick="openPopup()">No</button>
+        </div>
+          
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <h2>AAawwwww</h2>
+    <p>You have been aproved to be my Date for LIFE(Can't celebrate now , but we will celebrate it for whole life)
+      <br> And thank you for accepting the Contract
+    </p>
+    <button id="ok" onclick="closePopup()">OK</button>
+  </div>
+
+  <script>
+    const popup = document.getElementById("popup");
+
+    function openPopup() {
+      popup.classList.add("open-popup");
+    }
+
+    function closePopup() {
+      popup.classList.remove("open-popup");
+    }
+
+    const b=document.getElementById('no');
+
+    b.addEventListener('mouseover',function(){
+      b.textContent='Ofcourse YES!';
+    });
+
+    b.addEventListener('mouseout',function(){
+      b.textContent='No';
+    });
+
+    const a=document.getElementById("ok");
+    a.addEventListener('mouseover',function(){
+      a.textContent='The End';
+    });
+
+  </script>
+</body>
+</html>
